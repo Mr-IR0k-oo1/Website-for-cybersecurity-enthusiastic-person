@@ -283,7 +283,7 @@ main {
   padding: 2rem;
   max-width: 1080px;
   margin: 0 auto;
-  background: linear-gradient(145deg, #000000, #6b6969);
+  background: linear-gradient(145deg, #000000, #2f2f2f);
   border-radius: 15px;
   box-shadow: 0 8px 30px rgba(46, 204, 113, 0.7);
   margin-top: 20px;
@@ -294,35 +294,62 @@ main {
 }
 
 main:hover {
-  background: linear-gradient(135deg, #9b9b9b, #242424);
+  background: linear-gradient(135deg, #0d2818, #04471c);
   box-shadow: 0 12px 40px rgba(46, 204, 113, 0.9);
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;600;700&display=swap');
 
-h2, h3 {
-  margin-bottom: 1rem;
-  color: #ffffff;
-  font-weight: 600;
+/* Professional Heading Styles */
+h1, h2, h3, h4, h5, h6 {
   font-family: 'Exo 2', sans-serif;
-  letter-spacing: 1.5px;
+  color: #ffffff;
+  text-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
   text-transform: uppercase;
 }
 
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  border-bottom: 2px solid #00ff00;
+  padding-bottom: 0.5rem;
+}
+
 h2 {
-  font-size: 2rem;
-  border-bottom: 1px solid #ff2164;
+  font-size: 2.5rem;
+  font-weight: 700;
+  border-bottom: 1px solid #00ff00;
   padding-bottom: 0.5rem;
 }
 
 h3 {
-  font-size: 1.5rem;
+  font-size: 2rem;
+  font-weight: 700;
 }
 
-p, ul {
+h4 {
+  font-size: 1.75rem;
+  font-weight: 600;
+}
+
+h5 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+h6 {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #d0f0c0;
   margin-bottom: 1.5rem;
-  color: #fb3dff; /* neon green */
-  text-shadow:none;
 }
 
 ul {
@@ -780,6 +807,224 @@ main a:hover {
   .hero-button {
     font-size: 1rem;
     padding: 0.75rem 1.5rem;
+  }
+}
+
+/* Responsive adjustments for headings and paragraphs */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  h3 {
+    font-size: 1.6rem;
+  }
+
+  h4 {
+    font-size: 1.4rem;
+  }
+
+  h5 {
+    font-size: 1.2rem;
+  }
+
+  h6 {
+    font-size: 1rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+}
+
+/* Additional responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  main {
+    max-width: 100%;
+    padding: 1rem;
+    margin: 5px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  h4 {
+    font-size: 1.1rem;
+  }
+
+  h5 {
+    font-size: 1rem;
+  }
+
+  h6 {
+    font-size: 0.9rem;
+  }
+
+  p {
+    font-size: 0.85rem;
+  }
+
+  .hero-content h2 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 0.9rem;
+  }
+
+  .hero-button {
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+  }
+
+  .hero-video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  main {
+    padding: 0.5rem;
+    margin: 2px;
+  }
+
+  h1 {
+    font-size: 1.3rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+  }
+
+  h4 {
+    font-size: 1rem;
+  }
+
+  h5 {
+    font-size: 0.9rem;
+  }
+
+  h6 {
+    font-size: 0.8rem;
+  }
+
+  p {
+    font-size: 0.8rem;
+  }
+
+  .hero-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .hero-content p {
+    font-size: 0.8rem;
+  }
+
+  .hero-button {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .auth-section {
+    padding: 1rem 0.5rem;
+    margin: 0.5rem;
+  }
+
+  .auth-title {
+    font-size: 1.5rem;
+  }
+
+  .form-button {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 320px) {
+  main {
+    padding: 0.25rem;
+    margin: 1px;
+  }
+
+  h1 {
+    font-size: 1.1rem;
+  }
+
+  h2 {
+    font-size: 1.1rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+
+  h4 {
+    font-size: 0.9rem;
+  }
+
+  h5 {
+    font-size: 0.8rem;
+  }
+
+  h6 {
+    font-size: 0.7rem;
+  }
+
+  p {
+    font-size: 0.75rem;
+  }
+
+  .hero-content h2 {
+    font-size: 1.2rem;
+  }
+
+  .hero-content p {
+    font-size: 0.75rem;
+  }
+
+  .hero-button {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .auth-section {
+    padding: 0.5rem 0.25rem;
+    margin: 0.25rem;
+  }
+
+  .auth-title {
+    font-size: 1.2rem;
+  }
+
+  .form-button {
+    font-size: 0.8rem;
+  }
+
+  .nav-toggle {
+    right: 0.5rem;
+  }
+
+  .header-container {
+    padding: 0.5rem;
   }
 }
 
