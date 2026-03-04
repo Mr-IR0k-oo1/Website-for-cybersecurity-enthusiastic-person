@@ -4,77 +4,119 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Blue Team - Cybersecurity Explorer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
 </head>
-<body>
+<body class="theme-blue">
   <header class="site-header">
     <div class="header-container">
-      <h1 class="glitch" data-text="Cybersecurity_Explorer">Cybersecurity_Explorer</h1>
+      <div class="header-left">
+          <h1 class="glitch" data-text="Cybersecurity_Explorer">
+            Cybersecurity_Explorer
+          </h1>
+          <div class="system-status">
+              <div class="status-dot"></div>
+              System: Secured
+          </div>
+      </div>
+      <nav class="nav-menu">
+          <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Cybersecurity</a></li>
+              <li><a href="cyberthreats.html">Cyber Threats</a></li>
+              <li><a href="redteam.html">Red Team</a></li>
+              <li><a href="blueteam.html" class="active">Blue Team</a></li>
+              <li><a href="topics.html">Key Topics</a></li>
+              <li><a href="roadmap.html">Roadmap</a></li>
+              <li><a href="resources.html">Resources</a></li>
+          </ul>
+      </nav>
       <button class="nav-toggle" aria-label="Toggle navigation">
         <span class="hamburger"></span>
       </button>
     </div>
-    <nav class="nav-menu">
-        <ul>
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="about.html">About Cybersecurity</a></li>
-            <li><a href="cyberthreats.html">Cyber Threats</a></li>
-            <li><a href="redteam.html">Red Team</a></li>
-            <li><a href="blueteam.html">Blue Team</a></li>
-            <li><a href="topics.html">Key Topics</a></li>
-            <li><a href="roadmap.html">Roadmap</a></li>
-            <li><a href="resources.html">Resources</a></li>
-        </ul>
-    </nav>
   </header>
     <main>
-        <section>
-            <h2>Blue Team</h2>
-            <p>The Blue Team is responsible for defending an organization's information systems by monitoring, detecting, and responding to cyber threats.</p>
-            <h3>Key Activities</h3>
-            <ul>
-                <li>Security Monitoring</li>
-                <li>Incident Response</li>
-                <li>Threat Hunting</li>
-                <li>Vulnerability Management</li>
-                <li>Log Analysis</li>
-                <li>Forensic Investigation</li>
-            </ul>
-            <h3>Processes</h3>
-            <ol>
-                <li><strong>Identify:</strong> Detect potential threats using monitoring tools.</li>
-                <li><strong>Protect:</strong> Implement defenses like firewalls and access controls.</li>
-                <li><strong>Detect:</strong> Monitor for anomalies and intrusions.</li>
-                <li><strong>Respond:</strong> Contain and mitigate incidents.</li>
-                <li><strong>Recover:</strong> Restore systems and learn from the event.</li>
-            </ol>
-            <h3>Tools Used</h3>
-            <ul>
-                <li>SIEM Systems (e.g., Splunk)</li>
-                <li>Intrusion Detection Systems (IDS)</li>
-                <li>Endpoint Detection and Response (EDR)</li>
-                <li>Firewalls</li>
-                <li>Antivirus Software</li>
-                <li>Forensic Tools</li>
-            </ul>
-            <h3>Integration with Red Team</h3>
-            <p>Blue Teams work closely with Red Teams in exercises to simulate attacks and improve defenses. Red Team findings help Blue Teams strengthen their strategies, creating a cycle of continuous improvement.</p>
-            <h3>Key Skills for Blue Team Members</h3>
-            <ul>
-                <li>Proficiency in security tools and technologies.</li>
-                <li>Strong analytical and problem-solving abilities.</li>
-                <li>Knowledge of threat intelligence and risk assessment.</li>
-                <li>Communication skills for reporting incidents and collaborating with teams.</li>
-            </ul>
-            <h3>Challenges Faced by Blue Teams</h3>
-            <p>Blue Teams must deal with alert fatigue from false positives, evolving threats, and resource constraints. Implementing automation and AI can help manage these challenges.</p>
-            <h3>Career Opportunities</h3>
-            <p>Blue Team roles include Security Analyst, Incident Responder, SOC Analyst, and CISO. Entry-level positions start around $70,000, with senior roles exceeding $120,000.</p>
+        <div class="sub-hero">
+            <h1 class="glitch" data-text="Defensive_Operations">Defensive_Operations</h1>
+            <p>Shielding the perimeter and ensuring digital resilience.</p>
+        </div>
+
+        <section class="split-section">
+            <div class="split-image">
+                <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80" alt="Blue Team Operations" style="width: 100%; display: block;">
+            </div>
+            <div class="split-text">
+                <h2>The Blue Team Mandate</h2>
+                <p>The Blue Team is the backbone of an organization's defense, maintaining security tools and responding to incidents in real-time.</p>
+                <ul class="icon-list">
+                    <li><i class="fas fa-eye"></i> 24/7 Security Monitoring</li>
+                    <li><i class="fas fa-biohazard"></i> Rapid Incident Response</li>
+                    <li><i class="fas fa-search-plus"></i> Proactive Threat Hunting</li>
+                </ul>
+            </div>
+        </section>
+
+        <h3><i class="fas fa-microscope"></i> SIEM Log Analysis</h3>
+        <div class="terminal">
+            <div class="terminal-header">
+                <div class="terminal-dot dot-red"></div>
+                <div class="terminal-dot dot-yellow"></div>
+                <div class="terminal-dot dot-green"></div>
+            </div>
+            <div class="terminal-body">
+                <div class="terminal-line">index=security event_id=4625 | stats count by src_ip</div>
+                <div class="terminal-line">ALARM: Bruteforce detected from 192.168.1.50</div>
+                <div class="terminal-line">ACTION: IP blacklisted on Palo Alto Firewall</div>
+                <div class="terminal-line">STATUS: Monitoring traffic for lateral movement.</div>
+            </div>
+        </div>
+
+        <div class="content-grid" style="margin-top: 3rem;">
+            <div class="content-card">
+                <h3><i class="fas fa-shield-virus"></i> Defensive Stack</h3>
+                <ul class="icon-list">
+                    <li><i class="fas fa-server"></i> SIEM: Splunk & ELK</li>
+                    <li><i class="fas fa-user-shield"></i> EDR: CrowdStrike & SentinelOne</li>
+                    <li><i class="fas fa-wall"></i> NGFW: Fortinet & Cisco</li>
+                    <li><i class="fas fa-key"></i> IAM: Okta & Azure AD</li>
+                </ul>
+            </div>
+            <div class="content-card">
+                <h3><i class="fas fa-user-graduate"></i> Career Specialization</h3>
+                <ul class="icon-list">
+                    <li><i class="fas fa-briefcase"></i> SOC Analyst (L1-L3)</li>
+                    <li><i class="fas fa-fire-extinguisher"></i> Incident Responder</li>
+                    <li><i class="fas fa-search"></i> Digital Forensics Investigator</li>
+                </ul>
+            </div>
+        </div>
+
+        <section style="margin-top: 4rem;">
+            <h3><i class="fas fa-sync"></i> Incident Response Life Cycle</h3>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h4>Preparation</h4>
+                    <p>Training and tool deployment.</p>
+                </div>
+                <div class="feature-card">
+                    <h4>Containment</h4>
+                    <p>Limiting the damage of a breach.</p>
+                </div>
+                <div class="feature-card">
+                    <h4>Recovery</h4>
+                    <p>Restoring systems to normal ops.</p>
+                </div>
+            </div>
         </section>
     </main>
     <footer>
         <p>© 2024 Cybersecurity Explorer. All rights reserved.</p>
     </footer>
+    <div class="particles"></div>
     <script src="script.js"></script>
 </body>
 </html>

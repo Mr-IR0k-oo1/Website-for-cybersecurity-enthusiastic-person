@@ -4,119 +4,112 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Resources - Cybersecurity Explorer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
 </head>
 <body>
   <header class="site-header">
     <div class="header-container">
-      <h1 class="glitch" data-text="Cybersecurity_Explorer">Cybersecurity_Explorer</h1>
+      <div class="header-left">
+          <h1 class="glitch" data-text="Cybersecurity_Explorer">
+            Cybersecurity_Explorer
+          </h1>
+          <div class="system-status">
+              <div class="status-dot"></div>
+              System: Secured
+          </div>
+      </div>
+      <nav class="nav-menu">
+          <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Cybersecurity</a></li>
+              <li><a href="cyberthreats.html">Cyber Threats</a></li>
+              <li><a href="redteam.html">Red Team</a></li>
+              <li><a href="blueteam.html">Blue Team</a></li>
+              <li><a href="topics.html">Key Topics</a></li>
+              <li><a href="roadmap.html">Roadmap</a></li>
+              <li><a href="resources.html" class="active">Resources</a></li>
+          </ul>
+      </nav>
       <button class="nav-toggle" aria-label="Toggle navigation">
         <span class="hamburger"></span>
       </button>
     </div>
-    <nav class="nav-menu">
-        <ul>
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="about.html">About Cybersecurity</a></li>
-            <li><a href="cyberthreats.html">Cyber Threats</a></li>
-            <li><a href="redteam.html">Red Team</a></li>
-            <li><a href="blueteam.html">Blue Team</a></li>
-            <li><a href="topics.html">Key Topics</a></li>
-            <li><a href="roadmap.html">Roadmap</a></li>
-            <li><a href="resources.html">Resources</a></li>
-        </ul>
-    </nav>
   </header>
     <main>
-        <section>
-            <h2>Additional Resources</h2>
-            <p>Explore these resources to deepen your knowledge in cybersecurity.</p>
-        </section>
-        <section>
-            <h3>Online Courses</h3>
-            <ul>
-                <li><a href="https://www.coursera.org/specializations/google-cybersecurity" target="_blank">Google Cybersecurity Specialization on Coursera</a> - Comprehensive beginner-friendly courses covering fundamentals and tools.</li>
-                <li><a href="https://www.udemy.com/topic/cyber-security/" target="_blank">Cybersecurity Courses on Udemy</a> - Affordable options from ethical hacking to network security.</li>
-                <li><a href="https://www.cybrary.it/" target="_blank">Cybrary - Free Cybersecurity Training</a> - Interactive labs and career paths.</li>
-                <li><a href="https://www.pluralsight.com/browse/information-cyber-security" target="_blank">Pluralsight Cybersecurity Paths</a> - Skill-based learning with hands-on projects.</li>
-                <li><a href="https://www.edx.org/learn/cybersecurity" target="_blank">edX Cybersecurity Courses</a> - University-level courses from MIT, Harvard, and more.</li>
-                <li><a href="https://www.futurelearn.com/subjects/it-and-computer-science-courses/cyber-security" target="_blank">FutureLearn Cybersecurity Courses</a> - Free courses from universities worldwide.</li>
-                <li><a href="https://www.linkedin.com/learning/topics/cybersecurity" target="_blank">LinkedIn Learning Cybersecurity</a> - Professional development courses with certificates.</li>
-                <li><a href="https://academy.hackeru.com/" target="_blank">HackerU Cybersecurity Academy</a> - Hands-on training for ethical hacking and penetration testing.</li>
-            </ul>
-        </section>
-        <section>
-            <h3>Certifications</h3>
-            <ul>
-                <li><a href="https://www.comptia.org/certifications/security" target="_blank">CompTIA Security+</a> - Entry-level certification for security fundamentals.</li>
-                <li><a href="https://www.eccouncil.org/programs/certified-ethical-hacker-ceh/" target="_blank">Certified Ethical Hacker (CEH)</a> - Focuses on offensive security techniques.</li>
-                <li><a href="https://www.isc2.org/Certifications/CISSP" target="_blank">CISSP</a> - Advanced certification for security management.</li>
-                <li><a href="https://www.offsec.com/courses/pen-200/" target="_blank">OSCP</a> - Practical penetration testing certification.</li>
-                <li><a href="https://www.comptia.org/certifications/cysa" target="_blank">CompTIA CySA+</a> - Intermediate certification for analytics and vulnerability management.</li>
-                <li><a href="https://www.isc2.org/Certifications/CCSP" target="_blank">CCSP</a> - Cloud security certification.</li>
-                <li><a href="https://www.giac.org/certifications" target="_blank">GIAC Certifications</a> - Various specialized certifications like GSEC, GPEN.</li>
-                <li><a href="https://www.aws.training/certification" target="_blank">AWS Certified Security - Specialty</a> - Cloud security for AWS.</li>
-            </ul>
-        </section>
-        <section>
-            <h3>Tools and Software</h3>
-            <ul>
-                <li><a href="https://www.wireshark.org/" target="_blank">Wireshark - Network Protocol Analyzer</a> - For packet sniffing and analysis.</li>
-                <li><a href="https://www.metasploit.com/" target="_blank">Metasploit - Penetration Testing Framework</a> - Exploit development and testing.</li>
-                <li><a href="https://nmap.org/" target="_blank">Nmap - Network Scanner</a> - Port scanning and host discovery.</li>
-                <li><a href="https://www.kali.org/" target="_blank">Kali Linux</a> - OS with pre-installed security tools.</li>
-            </ul>
-        </section>
-        <section>
-            <h3>Books</h3>
-            <ul>
-                <li>"Hacking: The Art of Exploitation" by Jon Erickson - Deep dive into low-level hacking.</li>
-                <li>"The Web Application Hacker's Handbook" by Dafydd Stuttard and Marcus Pinto - Web security vulnerabilities.</li>
-                <li>"Cryptography and Network Security" by William Stallings - Theoretical foundations.</li>
-                <li>"Ghost in the Wires" by Kevin Mitnick - Real-world hacking stories.</li>
-                <li>"Metasploit: The Penetration Tester's Guide" by David Kennedy et al. - Guide to using Metasploit for penetration testing.</li>
-                <li>"Black Hat Python" by Justin Seitz - Python programming for hackers.</li>
-                <li>"The Cuckoo's Egg" by Clifford Stoll - True story of tracking a hacker.</li>
-                <li>"Practical Malware Analysis" by Michael Sikorski and Andrew Honig - Techniques for analyzing malware.</li>
-            </ul>
-        </section>
-        <section>
-            <h3>Communities and Forums</h3>
-            <ul>
-                <li><a href="https://www.reddit.com/r/cybersecurity/" target="_blank">Reddit r/cybersecurity</a> - Discussion and news.</li>
-                <li><a href="https://www.owasp.org/" target="_blank">OWASP</a> - Web application security community.</li>
-                <li><a href="https://www.blackhat.com/" target="_blank">Black Hat</a> - Conferences and research.</li>
-                <li><a href="https://www.hackerone.com/" target="_blank">HackerOne</a> - Bug bounty platform.</li>
-            </ul>
-        </section>
-        <section>
-            <h3>Podcasts</h3>
-            <ul>
-                <li><a href="https://darknetdiaries.com/" target="_blank">Darknet Diaries</a> - Stories of hackers and breaches.</li>
-                <li><a href="https://www.cyberwire.com/podcasts" target="_blank">The CyberWire Daily</a> - Daily cybersecurity news.</li>
-                <li><a href="https://www.brakeingsecurity.com/" target="_blank">Brakeing Down Security</a> - Interviews with experts.</li>
-            </ul>
-        </section>
-        <section>
-            <h3>YouTube Channels</h3>
-            <ul>
-                <li><a href="https://www.youtube.com/c/NetworkChuck" target="_blank">NetworkChuck</a> - Beginner-friendly cybersecurity tutorials.</li>
-                <li><a href="https://www.youtube.com/c/JohnHammond010" target="_blank">John Hammond</a> - Ethical hacking demos.</li>
-                <li><a href="https://www.youtube.com/c/HackerSploit" target="_blank">HackerSploit</a> - Advanced security concepts.</li>
-            </ul>
-        </section>
-        <section>
-            <h3>Blogs and News</h3>
-            <ul>
-                <li><a href="https://www.kaspersky.com/blog" target="_blank">Kaspersky Blog</a> - Threat analysis and tips.</li>
-                <li><a href="https://www.csoonline.com/" target="_blank">CSO Online</a> - Cybersecurity news and articles.</li>
-                <li><a href="https://www.schneier.com/" target="_blank">Schneier on Security</a> - Bruce Schneier's blog on security issues.</li>
-            </ul>
+        <div class="sub-hero">
+            <h1 class="glitch" data-text="Resource_Library">Resource_Library</h1>
+            <p>Curated assets for continuous learning and operational excellence.</p>
+        </div>
+
+        <div class="content-grid">
+            <div class="content-card">
+                <h3><i class="fas fa-graduation-cap"></i> Free Learning Platforms</h3>
+                <ul class="icon-list">
+                    <li><i class="fas fa-external-link-alt"></i> <a href="https://tryhackme.com" target="_blank">TryHackMe</a> - Gamified learning.</li>
+                    <li><i class="fas fa-external-link-alt"></i> <a href="https://www.hackthebox.com" target="_blank">HackTheBox</a> - Advanced labs.</li>
+                    <li><i class="fas fa-external-link-alt"></i> <a href="https://www.cybrary.it" target="_blank">Cybrary</a> - IT & Cyber training.</li>
+                    <li><i class="fas fa-external-link-alt"></i> <a href="https://overthewire.org" target="_blank">OverTheWire</a> - Wargames for Linux.</li>
+                </ul>
+            </div>
+
+            <div class="content-card">
+                <h3><i class="fas fa-tools"></i> Essential Toolsets</h3>
+                <ul class="icon-list">
+                    <li><i class="fas fa-linux"></i> <a href="https://www.kali.org" target="_blank">Kali Linux</a> - Pentesting OS.</li>
+                    <li><i class="fas fa-dragon"></i> <a href="https://www.parrotsec.org" target="_blank">Parrot Security</a> - Secure OS.</li>
+                    <li><i class="fas fa-spider"></i> <a href="https://portswigger.net/burp" target="_blank">Burp Suite</a> - Web Analysis.</li>
+                    <li><i class="fas fa-search-dollar"></i> <a href="https://www.metasploit.com" target="_blank">Metasploit</a> - Exploitation.</li>
+                </ul>
+            </div>
+
+            <div class="content-card">
+                <h3><i class="fas fa-book"></i> Reading & Documentation</h3>
+                <ul class="icon-list">
+                    <li><i class="fas fa-file-pdf"></i> <a href="https://owasp.org/www-project-top-ten/" target="_blank">OWASP Top 10</a> - Web Risks.</li>
+                    <li><i class="fas fa-bookmark"></i> <a href="https://krebsonsecurity.com" target="_blank">Krebs on Security</a> - News.</li>
+                    <li><i class="fas fa-rss"></i> <a href="https://thehackernews.com" target="_blank">The Hacker News</a> - Updates.</li>
+                </ul>
+            </div>
+
+            <div class="content-card">
+                <h3><i class="fas fa-microphone-alt"></i> Podcasts & Media</h3>
+                <ul class="icon-list">
+                    <li><i class="fas fa-headphones"></i> <a href="https://darknetdiaries.com" target="_blank">Darknet Diaries</a> - True stories.</li>
+                    <li><i class="fas fa-video"></i> <a href="https://www.youtube.com/@IppSec" target="_blank">IppSec</a> - Lab walkthroughs.</li>
+                    <li><i class="fas fa-video"></i> <a href="https://www.youtube.com/@NetworkChuck" target="_blank">NetworkChuck</a> - IT fun.</li>
+                </ul>
+            </div>
+        </div>
+
+        <section style="margin-top: 4rem;">
+            <h3><i class="fas fa-users"></i> Community Hubs</h3>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <i class="fab fa-discord"></i>
+                    <h4>Discord Servers</h4>
+                    <p>Join THM and HTB communities for real-time support.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fab fa-reddit"></i>
+                    <h4>Subreddits</h4>
+                    <p>r/cybersecurity, r/netsec, r/hacking for curated news.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fab fa-github"></i>
+                    <h4>GitHub Repos</h4>
+                    <p>Awesome-Cybersecurity and payload lists.</p>
+                </div>
+            </div>
         </section>
     </main>
     <footer>
         <p>© 2024 Cybersecurity Explorer. All rights reserved.</p>
     </footer>
+    <div class="particles"></div>
     <script src="script.js"></script>
 </body>
 </html>

@@ -4,110 +4,125 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Key Topics - Cybersecurity Explorer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
 </head>
 <body>
-   <header class="site-header">
+  <header class="site-header">
     <div class="header-container">
-      <h1 class="glitch" data-text="Cybersecurity_Explorer">Cybersecurity_Explorer</h1>
+      <div class="header-left">
+          <h1 class="glitch" data-text="Cybersecurity_Explorer">
+            Cybersecurity_Explorer
+          </h1>
+          <div class="system-status">
+              <div class="status-dot"></div>
+              System: Secured
+          </div>
+      </div>
+      <nav class="nav-menu">
+          <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Cybersecurity</a></li>
+              <li><a href="cyberthreats.html">Cyber Threats</a></li>
+              <li><a href="redteam.html">Red Team</a></li>
+              <li><a href="blueteam.html">Blue Team</a></li>
+              <li><a href="topics.html" class="active">Key Topics</a></li>
+              <li><a href="roadmap.html">Roadmap</a></li>
+              <li><a href="resources.html">Resources</a></li>
+          </ul>
+      </nav>
       <button class="nav-toggle" aria-label="Toggle navigation">
         <span class="hamburger"></span>
       </button>
     </div>
-    <nav class="nav-menu">
-        <ul>
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="about.html">About Cybersecurity</a></li>
-            <li><a href="cyberthreats.html">Cyber Threats</a></li>
-            <li><a href="redteam.html">Red Team</a></li>
-            <li><a href="blueteam.html">Blue Team</a></li>
-            <li><a href="topics.html">Key Topics</a></li>
-            <li><a href="roadmap.html">Roadmap</a></li>
-            <li><a href="resources.html">Resources</a></li>
-        </ul>
-    </nav>
   </header>
     <main>
-        <section>
-            <h2>Key Cybersecurity Topics</h2>
-            <p>Explore essential areas in cybersecurity to build a strong foundation.</p>
-        </section>
-        <section class="topic">
-            <button class="collapsible" onclick="toggleSection('network')">Network Security</button>
-            <div id="network" class="content">
-                <p>Network security involves protecting the integrity of networks and their data from unauthorized access. Key concepts include firewalls, VPNs, and intrusion detection systems.</p>
-                <p><strong>Examples:</strong> Using firewalls to block unauthorized traffic, setting up VPNs for secure remote access, and deploying IDS to detect suspicious activity.</p>
-                <p><strong>Tools:</strong> Wireshark, Nmap, Snort.</p>
+        <div class="sub-hero">
+            <h1 class="glitch" data-text="Knowledge_Base">Knowledge_Base</h1>
+            <p>Deep dive into the specialized domains of information security.</p>
+        </div>
+
+        <section class="topic-container">
+            <div class="topic">
+                <button class="collapsible"><i class="fas fa-network-wired"></i> Network Security</button>
+                <div class="content">
+                    <p>Network security involves protecting the integrity of networks and their data from unauthorized access. Key concepts include firewalls, VPNs, and intrusion detection systems.</p>
+                    <p><strong>Tools:</strong> Wireshark, Nmap, Snort.</p>
+                </div>
             </div>
-        </section>
-        <section class="topic">
-            <button class="collapsible" onclick="toggleSection('ethical')">Ethical Hacking</button>
-            <div id="ethical" class="content">
-                <p>Ethical hacking, or penetration testing, involves simulating attacks to identify vulnerabilities. Tools like Metasploit and techniques such as social engineering are common.</p>
-                <p><strong>Phases:</strong> Reconnaissance, scanning, gaining access, maintaining access, and reporting.</p>
-                <p><strong>Tools:</strong> Metasploit, Burp Suite, Kali Linux.</p>
+
+            <div class="topic">
+                <button class="collapsible"><i class="fas fa-user-ninja"></i> Ethical Hacking</button>
+                <div class="content">
+                    <p>Ethical hacking, or penetration testing, involves simulating attacks to identify vulnerabilities. Tools like Metasploit and techniques such as social engineering are common.</p>
+                    <p><strong>Tools:</strong> Metasploit, Burp Suite, Kali Linux.</p>
+                </div>
             </div>
-        </section>
-        <section class="topic">
-            <button class="collapsible" onclick="toggleSection('crypto')">Cryptography</button>
-            <div id="crypto" class="content">
-                <p>Cryptography is the science of securing communication. It includes encryption algorithms like AES and RSA, and concepts like public-key infrastructure.</p>
-                <p><strong>Applications:</strong> Secure messaging, digital signatures, SSL/TLS for web security.</p>
-                <p><strong>Tools:</strong> OpenSSL, GnuPG.</p>
+
+            <div class="topic">
+                <button class="collapsible"><i class="fas fa-key"></i> Cryptography</button>
+                <div class="content">
+                    <p>Cryptography is the science of securing communication. It includes encryption algorithms like AES and RSA, and concepts like public-key infrastructure.</p>
+                    <p><strong>Tools:</strong> OpenSSL, GnuPG.</p>
+                </div>
             </div>
-        </section>
-        <section class="topic">
-            <button class="collapsible" onclick="toggleSection('web')">Web Security</button>
-            <div id="web" class="content">
-                <p>Web security focuses on protecting websites and web applications from threats like SQL injection, XSS, and CSRF. Best practices include input validation and secure coding.</p>
-                <p><strong>Common Vulnerabilities:</strong> OWASP Top 10 including injection flaws, broken authentication, and security misconfigurations.</p>
-                <p><strong>Tools:</strong> OWASP ZAP, Burp Suite.</p>
+
+            <div class="topic">
+                <button class="collapsible"><i class="fas fa-globe"></i> Web Security</button>
+                <div class="content">
+                    <p>Web security focuses on protecting websites and web applications from threats like SQL injection, XSS, and CSRF.</p>
+                    <p><strong>Tools:</strong> OWASP ZAP, Burp Suite.</p>
+                </div>
             </div>
-        </section>
-        <section class="topic">
-            <button class="collapsible" onclick="toggleSection('incident')">Incident Response</button>
-            <div id="incident" class="content">
-                <p>Incident response is the process of identifying, containing, and mitigating cyber incidents. It involves planning, detection, response, and recovery phases.</p>
-                <p><strong>Phases:</strong> Preparation, identification, containment, eradication, recovery, and lessons learned.</p>
-                <p><strong>Tools:</strong> SIEM systems, forensic tools.</p>
+
+            <div class="topic">
+                <button class="collapsible"><i class="fas fa-biohazard"></i> Incident Response</button>
+                <div class="content">
+                    <p>Incident response is the process of identifying, containing, and mitigating cyber incidents. It involves planning, detection, response, and recovery phases.</p>
+                    <p><strong>Tools:</strong> SIEM systems, forensic tools.</p>
+                </div>
             </div>
-        </section>
-        <section class="topic">
-            <button class="collapsible" onclick="toggleSection('cloud')">Cloud Security</button>
-            <div id="cloud" class="content">
-                <p>Cloud security protects data, applications, and infrastructure in cloud environments. It includes identity and access management, data encryption, and compliance with standards like GDPR and HIPAA.</p>
-                <p><strong>Key Concepts:</strong> Shared responsibility model, multi-cloud strategies, serverless security.</p>
-                <p><strong>Tools:</strong> AWS IAM, Azure Security Center, Google Cloud Security Command Center.</p>
+
+            <div class="topic">
+                <button class="collapsible"><i class="fas fa-cloud"></i> Cloud Security</button>
+                <div class="content">
+                    <p>Cloud security protects data, applications, and infrastructure in cloud environments. It includes identity and access management and data encryption.</p>
+                    <p><strong>Tools:</strong> AWS IAM, Azure Security Center.</p>
+                </div>
             </div>
-        </section>
-        <section class="topic">
-            <button class="collapsible" onclick="toggleSection('iot')">IoT Security</button>
-            <div id="iot" class="content">
-                <p>IoT security focuses on securing internet-connected devices, which often have limited resources and can be entry points for attacks. Challenges include device authentication, firmware updates, and network segmentation.</p>
-                <p><strong>Common Threats:</strong> Botnets, eavesdropping, physical tampering.</p>
-                <p><strong>Tools:</strong> IoT security frameworks, device management platforms.</p>
+
+            <div class="topic">
+                <button class="collapsible"><i class="fas fa-microchip"></i> IoT Security</button>
+                <div class="content">
+                    <p>IoT security focuses on securing internet-connected devices, which often have limited resources and can be entry points for attacks.</p>
+                    <p><strong>Threats:</strong> Botnets, eavesdropping, physical tampering.</p>
+                </div>
             </div>
-        </section>
-        <section class="topic">
-            <button class="collapsible" onclick="toggleSection('mobile')">Mobile Security</button>
-            <div id="mobile" class="content">
-                <p>Mobile security protects smartphones, tablets, and apps from threats like malware, data leaks, and unauthorized access. It involves app vetting, encryption, and mobile device management (MDM).</p>
-                <p><strong>Best Practices:</strong> Use strong passwords, enable biometric authentication, avoid public Wi-Fi for sensitive transactions.</p>
-                <p><strong>Tools:</strong> Mobile antivirus apps, MDM solutions like Jamf or Microsoft Intune.</p>
+
+            <div class="topic">
+                <button class="collapsible"><i class="fas fa-mobile-alt"></i> Mobile Security</button>
+                <div class="content">
+                    <p>Mobile security protects smartphones, tablets, and apps from threats like malware, data leaks, and unauthorized access.</p>
+                    <p><strong>Tools:</strong> Jamf, Microsoft Intune.</p>
+                </div>
             </div>
-        </section>
-        <section class="topic">
-            <button class="collapsible" onclick="toggleSection('forensics')">Digital Forensics</button>
-            <div id="forensics" class="content">
-                <p>Digital forensics involves collecting, preserving, analyzing, and presenting digital evidence in legal contexts. It helps in investigating cybercrimes and understanding attack methods.</p>
-                <p><strong>Phases:</strong> Identification, preservation, analysis, presentation.</p>
-                <p><strong>Tools:</strong> Autopsy, EnCase, Volatility for memory analysis.</p>
+
+            <div class="topic">
+                <button class="collapsible"><i class="fas fa-search"></i> Digital Forensics</button>
+                <div class="content">
+                    <p>Digital forensics involves collecting, preserving, analyzing, and presenting digital evidence in legal contexts.</p>
+                    <p><strong>Tools:</strong> Autopsy, EnCase, Volatility.</p>
+                </div>
             </div>
         </section>
     </main>
     <footer>
         <p>© 2024 Cybersecurity Explorer. All rights reserved.</p>
     </footer>
+    <div class="particles"></div>
     <script src="script.js"></script>
 </body>
 </html>

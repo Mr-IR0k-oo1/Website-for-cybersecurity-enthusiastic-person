@@ -4,38 +4,38 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Login - Cybersecurity Explorer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 </head>
 <body>
+    <header class="site-header">
+        <div class="header-container">
+            <h1 class="glitch" data-text="Cybersecurity_Explorer"><a href="index.html" style="color: inherit; text-decoration: none;">Cybersecurity_Explorer</a></h1>
+        </div>
+    </header>
+
     <main>
-        <section class="auth-section login-section">
-            <div class="auth-container">
-                <h2 class="auth-title">Login</h2>
-                <p class="form-intro">Please enter your credentials to login and access personalized cybersecurity resources and tools.</p>
-                <form id="loginForm" class="auth-form">
-                    <div class="form-group">
-                        <label for="username" class="form-label">Username</label>
-                        <input type="text" id="username" name="username" required class="form-input" />
-                    </div>
-                    <div class="form-group">
-                        <label for="password" class="form-label">Password</label>
-                        <input type="password" id="password" name="password" required class="form-input" />
-                    </div>
-                    <button type="submit" class="form-button">Login</button>
-                </form>
-                <p class="auth-link">Don't have an account? <a href="registration.html">Register here</a>.</p>
-                <div class="auth-tips">
-                    <h3>Account Security Tips</h3>
-                    <ul>
-                        <li>Use a strong, unique password for each account.</li>
-                        <li>Enable two-factor authentication (2FA) whenever possible.</li>
-                        <li>Avoid using public Wi-Fi for logging in.</li>
-                        <li>Regularly update your password and monitor account activity.</li>
-                    </ul>
-                    <p>For more on cybersecurity best practices, visit our <a href="about.html">About page</a>.</p>
+        <section class="auth-section">
+            <h2 class="auth-title glitch" data-text="Access_Grant">Access_Grant</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label class="form-label"><i class="fas fa-terminal"></i> Operator_ID</label>
+                    <input type="text" class="form-input" placeholder="e.g. admin_ghost" required>
                 </div>
-            </div>
+                <div class="form-group">
+                    <label class="form-label"><i class="fas fa-key"></i> Passphrase</label>
+                    <input type="password" class="form-input" placeholder="••••••••" required>
+                </div>
+                <button type="submit" class="hero-button form-button">Authorize</button>
+            </form>
+            <p style="margin-top: 2rem; text-align: center; font-size: 0.9rem;">
+                New Operator? <a href="registration.html">Request_Access</a>
+            </p>
         </section>
     </main>
+
+    <div class="particles"></div>
+    <script src="script.js"></script>
 </body>
 </html>

@@ -4,111 +4,157 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Cyber Threats - Cybersecurity Explorer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
 </head>
-<body>
+<body class="theme-red">
   <header class="site-header">
     <div class="header-container">
-      <h1 class="glitch" data-text="Cybersecurity_Explorer">Cybersecurity_Explorer</h1>
+      <div class="header-left">
+          <h1 class="glitch" data-text="Cybersecurity_Explorer">
+            Cybersecurity_Explorer
+          </h1>
+          <div class="system-status">
+              <div class="status-dot"></div>
+              System: Secured
+          </div>
+      </div>
+      <nav class="nav-menu">
+          <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Cybersecurity</a></li>
+              <li><a href="cyberthreats.html" class="active">Cyber Threats</a></li>
+              <li><a href="redteam.html">Red Team</a></li>
+              <li><a href="blueteam.html">Blue Team</a></li>
+              <li><a href="topics.html">Key Topics</a></li>
+              <li><a href="roadmap.html">Roadmap</a></li>
+              <li><a href="resources.html">Resources</a></li>
+          </ul>
+      </nav>
       <button class="nav-toggle" aria-label="Toggle navigation">
         <span class="hamburger"></span>
       </button>
     </div>
-    <nav class="nav-menu">
-        <ul>
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="about.html">About Cybersecurity</a></li>
-            <li><a href="cyberthreats.html">Cyber Threats</a></li>
-            <li><a href="redteam.html">Red Team</a></li>
-            <li><a href="blueteam.html">Blue Team</a></li>
-            <li><a href="topics.html">Key Topics</a></li>
-            <li><a href="roadmap.html">Roadmap</a></li>
-            <li><a href="resources.html">Resources</a></li>
-        </ul>
-    </nav>
   </header>
     <main>
-        <section class="danger-banner">
-            <h2>⚠️ Understand Common Online Risks Like Phishing, Malware, and Scams</h2>
-            <p>Stay informed about the most prevalent cyber threats to protect yourself online.</p>
+        <div class="sub-hero">
+            <h1 class="glitch" data-text="Cyber_Threats">Cyber_Threats</h1>
+            <p>Understand the evolution of digital warfare and modern attack vectors.</p>
+        </div>
+
+        <section class="danger-banner" style="border-left: 5px solid var(--accent-red); background: rgba(255, 0, 60, 0.05);">
+            <h2><i class="fas fa-exclamation-triangle"></i> Strategic Risk Awareness</h2>
+            <p>Stay informed about the most prevalent cyber threats to protect yourself and your organization in an increasingly hostile digital landscape.</p>
         </section>
-        <section>
-            <h3>Phishing</h3>
-            <p>Phishing is a cyber attack where attackers impersonate trustworthy entities to trick individuals into revealing sensitive information such as passwords, credit card numbers, or personal data. Common methods include fake emails, websites, or messages that appear legitimate.</p>
-            <p><strong>How to recognize:</strong> Unsolicited emails asking for personal information, suspicious links, or urgent requests for action.</p>
-            <p><strong>Protection tips:</strong> Verify sender identities, avoid clicking unknown links, and use email filters.</p>
-        </section>
-        <section>
-            <h3>Malware</h3>
-            <p>Malware, short for malicious software, includes viruses, worms, trojans, and ransomware designed to harm or exploit devices. It can steal data, disrupt operations, or hold files hostage for ransom.</p>
-            <p><strong>Common types:</strong> Ransomware encrypts files and demands payment; spyware monitors activities without consent.</p>
-            <p><strong>Prevention:</strong> Install reputable antivirus software, keep systems updated, and avoid downloading from untrusted sources.</p>
-        </section>
-        <section>
-            <h3>Scams</h3>
-            <p>Online scams involve fraudulent schemes to deceive people into giving away money or information. Examples include fake investment opportunities, lottery scams, or tech support fraud.</p>
-            <p><strong>Red flags:</strong> Promises of easy money, pressure to act quickly, or requests for payment via unusual methods.</p>
-            <p><strong>Best practices:</strong> Research before investing, never share sensitive information with unsolicited contacts, and report suspicious activities.</p>
-        </section>
-        <section>
-            <h3>Real-World Examples</h3>
-            <ul>
-                <li><strong>Phishing Example:</strong> An email pretending to be from your bank asking you to update your account details via a link that leads to a fake site.</li>
-                <li><strong>Malware Example:</strong> Downloading a free game that installs ransomware, locking your files until you pay.</li>
-                <li><strong>Scam Example:</strong> A call from someone claiming to be Microsoft support, asking for remote access to "fix" your computer.</li>
-            </ul>
-        </section>
-        <section>
-            <h3>DDoS Attacks</h3>
-            <p>Distributed Denial of Service (DDoS) attacks overwhelm a target with traffic from multiple sources, making it unavailable. Attackers use botnets to flood servers with requests.</p>
-            <p><strong>Common types:</strong> Volumetric attacks (flooding with data), protocol attacks (exploiting weaknesses), application-layer attacks (targeting web apps).</p>
-            <p><strong>Impacts:</strong> Service downtime, financial losses, reputational damage.</p>
-            <p><strong>Prevention:</strong> Use DDoS protection services like Cloudflare, implement rate limiting, and monitor traffic patterns.</p>
-        </section>
-        <section>
-            <h3>Insider Threats</h3>
-            <p>Insider threats come from within the organization, such as employees or contractors with access to sensitive data. Motives can be malicious (e.g., theft) or accidental (e.g., negligence).</p>
-            <p><strong>Examples:</strong> An employee leaking data for profit, or accidentally exposing credentials.</p>
-            <p><strong>Prevention:</strong> Conduct background checks, limit access with least privilege, monitor user activity, and provide security training.</p>
-        </section>
-        <section>
-            <h3>Advanced Persistent Threats (APTs)</h3>
-            <p>APTs are sophisticated, long-term attacks by organized groups (e.g., nation-states) aiming to steal data or disrupt operations. They involve reconnaissance, infiltration, and exfiltration over months.</p>
-            <p><strong>Example:</strong> The SolarWinds hack, where attackers inserted malware into software updates to spy on governments and companies.</p>
-            <p><strong>Prevention:</strong> Implement multi-layered defenses, regular audits, threat intelligence sharing, and advanced detection tools like EDR.</p>
-        </section>
-        <section>
-            <h3>Social Engineering</h3>
-            <p>Social engineering manipulates people into divulging confidential information or performing actions that compromise security. It exploits human psychology rather than technical vulnerabilities.</p>
-            <p><strong>Common types:</strong> Phishing, baiting (offering something enticing), pretexting (creating a fabricated scenario), and tailgating (following someone into a restricted area).</p>
-            <p><strong>Example:</strong> An attacker posing as IT support calls an employee and tricks them into revealing login credentials.</p>
-            <p><strong>Prevention:</strong> Employee training on recognizing social engineering tactics, verifying requests through multiple channels, and implementing strict access controls.</p>
-        </section>
-        <section>
-            <h3>Zero-Day Exploits</h3>
-            <p>Zero-day exploits target vulnerabilities unknown to the software vendor or public. Attackers discover and exploit these before patches are available.</p>
-            <p><strong>Impact:</strong> Can lead to widespread infections, data theft, or system compromise.</p>
-            <p><strong>Example:</strong> The WannaCry ransomware exploited a zero-day vulnerability in Windows SMB protocol, affecting hundreds of thousands of systems worldwide.</p>
-            <p><strong>Prevention:</strong> Keep systems updated, use intrusion detection systems, employ behavior-based security tools, and participate in bug bounty programs.</p>
-        </section>
-        <section>
-            <h3>Man-in-the-Middle (MitM) Attacks</h3>
-            <p>MitM attacks intercept communications between two parties without their knowledge. Attackers can eavesdrop, modify data, or impersonate one of the parties.</p>
-            <p><strong>Common scenarios:</strong> Public Wi-Fi interception, DNS spoofing, or SSL stripping.</p>
-            <p><strong>Example:</strong> An attacker on a coffee shop Wi-Fi captures login credentials as users connect to websites.</p>
-            <p><strong>Prevention:</strong> Use HTTPS everywhere, enable certificate pinning, avoid public Wi-Fi for sensitive transactions, and use VPNs.</p>
-        </section>
-        <section>
-            <h3>SQL Injection</h3>
-            <p>SQL injection occurs when attackers insert malicious SQL code into a query, exploiting vulnerabilities in web applications that interact with databases.</p>
-            <p><strong>How it works:</strong> Unsanitized user input is concatenated into SQL statements, allowing attackers to read, modify, or delete database contents.</p>
-            <p><strong>Example:</strong> Entering ' OR '1'='1 in a login form to bypass authentication.</p>
-            <p><strong>Prevention:</strong> Use prepared statements, input validation, parameterized queries, and web application firewalls (WAF).</p>
+
+        <div class="content-grid">
+            <div class="content-card">
+                <h3><i class="fas fa-fish"></i> Phishing</h3>
+                <p>Sophisticated deception targeting human psychology to extract sensitive credentials.</p>
+                <ul class="icon-list">
+                    <li><i class="fas fa-check-circle"></i> <strong>Recognition:</strong> Suspicious senders & urgent tone.</li>
+                    <li><i class="fas fa-shield-alt"></i> <strong>Defense:</strong> MFA & email sandboxing.</li>
+                </ul>
+            </div>
+
+            <div class="content-card">
+                <h3><i class="fas fa-virus"></i> Malware</h3>
+                <p>Malicious code designed to infiltrate, damage, or disable computer systems.</p>
+                <ul class="icon-list">
+                    <li><i class="fas fa-lock"></i> <strong>Ransomware:</strong> Data encryption for extortion.</li>
+                    <li><i class="fas fa-eye"></i> <strong>Spyware:</strong> Unauthorized surveillance.</li>
+                </ul>
+            </div>
+
+            <div class="content-card">
+                <h3><i class="fas fa-users-slash"></i> Social Engineering</h3>
+                <p>Manipulating individuals into divulging confidential information through trust.</p>
+                <ul class="icon-list">
+                    <li><i class="fas fa-mask"></i> <strong>Pretexting:</strong> Fabricated scenarios.</li>
+                    <li><i class="fas fa-door-open"></i> <strong>Tailgating:</strong> Physical access bypass.</li>
+                </ul>
+            </div>
+
+            <div class="content-card">
+                <h3><i class="fas fa-network-wired"></i> DDoS Attacks</h3>
+                <p>Overwhelming targets with a flood of internet traffic from distributed botnets.</p>
+                <ul class="icon-list">
+                    <li><i class="fas fa-bolt"></i> <strong>Volumetric:</strong> Bandwidth exhaustion.</li>
+                    <li><i class="fas fa-cogs"></i> <strong>App-Layer:</strong> Targeting server resources.</li>
+                </ul>
+            </div>
+
+            <div class="content-card">
+                <h3><i class="fas fa-bug"></i> Zero-Day Exploits</h3>
+                <p>Attacks targeting vulnerabilities unknown to the software vendor.</p>
+                <div class="terminal">
+                    <div class="terminal-header">
+                        <div class="terminal-dot dot-red"></div>
+                        <div class="terminal-dot dot-yellow"></div>
+                        <div class="terminal-dot dot-green"></div>
+                    </div>
+                    <div class="terminal-body">
+                        <div class="terminal-line">exploit -v cve-2024-XXXX</div>
+                        <div class="terminal-line">payload injection successful...</div>
+                        <div class="terminal-line">status: unpatched</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-card">
+                <h3><i class="fas fa-database"></i> SQL Injection</h3>
+                <p>Inserting malicious SQL code into entry fields for execution.</p>
+                <div class="terminal">
+                    <div class="terminal-header">
+                        <div class="terminal-dot dot-red"></div>
+                        <div class="terminal-dot dot-yellow"></div>
+                        <div class="terminal-dot dot-green"></div>
+                    </div>
+                    <div class="terminal-body">
+                        <div class="terminal-line">SELECT * FROM users WHERE id = '1' OR '1'='1'</div>
+                        <div class="terminal-line">Access Granted: Administrator</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section style="margin-top: 4rem;">
+            <h3><i class="fas fa-history"></i> Real-World Impact</h3>
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Threat Actor</th>
+                        <th>Target</th>
+                        <th>Impact</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>State-Sponsored</td>
+                        <td>Infrastructure</td>
+                        <td>Operational Paralysis</td>
+                    </tr>
+                    <tr>
+                        <td>Cybercrime Syndicates</td>
+                        <td>Financial Inst.</td>
+                        <td>Data & Asset Theft</td>
+                    </tr>
+                    <tr>
+                        <td>Hacktivists</td>
+                        <td>Corporations</td>
+                        <td>Reputational Damage</td>
+                    </tr>
+                </tbody>
+            </table>
         </section>
     </main>
     <footer>
         <p>© 2024 Cybersecurity Explorer. All rights reserved.</p>
     </footer>
+    <div class="particles"></div>
     <script src="script.js"></script>
 </body>
 </html>

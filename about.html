@@ -4,133 +4,129 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>About Cybersecurity - Cybersecurity Explorer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
 </head>
 <body>
   <header class="site-header">
     <div class="header-container">
-      <h1 class="glitch" data-text="Cybersecurity_Explorer">Cybersecurity_Explorer</h1>
+      <div class="header-left">
+          <h1 class="glitch" data-text="Cybersecurity_Explorer">
+            Cybersecurity_Explorer
+          </h1>
+          <div class="system-status">
+              <div class="status-dot"></div>
+              System: Secured
+          </div>
+      </div>
+      <nav class="nav-menu">
+          <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html" class="active">About Cybersecurity</a></li>
+              <li><a href="cyberthreats.html">Cyber Threats</a></li>
+              <li><a href="redteam.html">Red Team</a></li>
+              <li><a href="blueteam.html">Blue Team</a></li>
+              <li><a href="topics.html">Key Topics</a></li>
+              <li><a href="roadmap.html">Roadmap</a></li>
+              <li><a href="resources.html">Resources</a></li>
+          </ul>
+      </nav>
       <button class="nav-toggle" aria-label="Toggle navigation">
         <span class="hamburger"></span>
       </button>
     </div>
-    <nav class="nav-menu">
-        <ul>
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="about.html">About Cybersecurity</a></li>
-            <li><a href="cyberthreats.html">Cyber Threats</a></li>
-            <li><a href="redteam.html">Red Team</a></li>
-            <li><a href="blueteam.html">Blue Team</a></li>
-            <li><a href="topics.html">Key Topics</a></li>
-            <li><a href="roadmap.html">Roadmap</a></li>
-            <li><a href="resources.html">Resources</a></li>
-        </ul>
-    </nav>
   </header>
     <main>
-        <section>
-            <h2>What is Cybersecurity?</h2>
-            <p>Cybersecurity is the practice of protecting systems, networks, and programs from digital attacks. These attacks are usually aimed at accessing, changing, or destroying sensitive information, extorting money from users, or interrupting normal business processes.</p>
+        <div class="sub-hero">
+            <h1 class="glitch" data-text="Core_Fundamentals">Core_Fundamentals</h1>
+            <p>Exploring the pillars of digital defense and information assurance.</p>
+        </div>
+
+        <section class="split-section">
+            <div class="split-text">
+                <h2>What is Cybersecurity?</h2>
+                <p>Cybersecurity is the elite practice of protecting high-value systems, networks, and sensitive data from malicious digital attacks. In an era of state-sponsored threats, professional defense is paramount.</p>
+                <div class="terminal">
+                    <div class="terminal-header">
+                        <div class="terminal-dot dot-red"></div>
+                        <div class="terminal-dot dot-yellow"></div>
+                        <div class="terminal-dot dot-green"></div>
+                    </div>
+                    <div class="terminal-body">
+                        <div class="terminal-line">Define CIA_TRIAD</div>
+                        <div class="terminal-line">Confidentiality: Data privacy.</div>
+                        <div class="terminal-line">Integrity: Data accuracy.</div>
+                        <div class="terminal-line">Availability: Data access.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="split-image">
+                <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80" alt="Cybersecurity Concept" style="width: 100%; display: block;">
+            </div>
         </section>
-        <section>
-            <h3>History of Cybersecurity</h3>
-            <p>The field of cybersecurity has evolved significantly since the 1970s. Early efforts focused on protecting military communications, but with the rise of the internet in the 1990s, cybersecurity became crucial for businesses and individuals alike. Major milestones include the creation of the first antivirus software and the establishment of organizations like CERT.</p>
+
+        <div class="content-grid">
+            <div class="content-card">
+                <h3><i class="fas fa-network-wired"></i> Network Security</h3>
+                <p>Protecting infrastructure from unauthorized access and maintaining traffic integrity.</p>
+            </div>
+            <div class="content-card">
+                <h3><i class="fas fa-laptop-code"></i> App Security</h3>
+                <p>Defending software at the code level from injection and logic flaws.</p>
+            </div>
+            <div class="content-card">
+                <h3><i class="fas fa-cloud-upload-alt"></i> Cloud Security</h3>
+                <p>Securing distributed assets in AWS, Azure, and Google Cloud environments.</p>
+            </div>
+        </div>
+
+        <section class="importance" style="margin-top: 4rem;">
+            <h3><i class="fas fa-chart-pie"></i> Industry Statistics</h3>
+            <div class="bento-grid" style="margin-top: 2rem;">
+                <div class="bento-item large">
+                    <h4 style="font-size: 3rem;">$366B</h4>
+                    <p>Estimated Global market reach by 2027.</p>
+                </div>
+                <div class="bento-item tall">
+                    <h4 style="font-size: 2.5rem;">3.5M</h4>
+                    <p>Unfilled global job roles currently available.</p>
+                </div>
+                <div class="bento-item wide">
+                    <h4 style="font-size: 2rem;">43%</h4>
+                    <p>Of attacks target small businesses directly, highlighting the need for widespread defense.</p>
+                </div>
+            </div>
         </section>
-        <section>
-            <h3>Importance of Cybersecurity</h3>
-            <p>In today's digital world, cybersecurity is essential to protect against threats like data breaches, ransomware, and identity theft. It ensures the confidentiality, integrity, and availability of information, safeguarding personal data, financial systems, and national infrastructure.</p>
-        </section>
-        <section>
-            <h3>Types of Cybersecurity</h3>
-            <ul>
-                <li><strong>Network Security:</strong> Protects network infrastructure from unauthorized access.</li>
-                <li><strong>Application Security:</strong> Focuses on keeping software and devices free of threats.</li>
-                <li><strong>Information Security:</strong> Protects the integrity and privacy of data.</li>
-                <li><strong>Operational Security:</strong> Involves processes and decisions for handling and protecting data.</li>
-                <li><strong>Disaster Recovery:</strong> Plans for responding to security breaches and restoring systems.</li>
-            </ul>
-        </section>
-        <section>
-            <h3>Common Threats</h3>
-            <p>Cyber threats include malware, phishing, DDoS attacks, and insider threats. Understanding these is key to effective defense.</p>
-        </section>
-        <section>
-            <h3>Cybersecurity Careers</h3>
-            <p>Cybersecurity offers diverse career paths with high demand and competitive salaries. Roles include:</p>
-            <ul>
-                <li><strong>Security Analyst:</strong> Monitors systems for threats and responds to incidents.</li>
-                <li><strong>Penetration Tester:</strong> Simulates attacks to find vulnerabilities.</li>
-                <li><strong>Security Engineer:</strong> Designs and implements security systems.</li>
-                <li><strong>CISO (Chief Information Security Officer):</strong> Oversees an organization's security strategy.</li>
-            </ul>
-            <p>Average salaries range from $90,000 for entry-level to over $200,000 for senior roles, with strong job growth projected.</p>
-        </section>
-        <section>
-            <h3>Industry Statistics</h3>
-            <p>The cybersecurity industry is booming:</p>
-            <ul>
-                <li>Global cybersecurity market expected to reach $366 billion by 2027.</li>
-                <li>3.5 million unfilled cybersecurity jobs worldwide.</li>
-                <li>60% of organizations experienced at least one successful cyber attack in the past year.</li>
-                <li>Small businesses are targeted in 43% of cyber attacks.</li>
-            </ul>
-        </section>
-        <section>
-            <h3>Future Trends</h3>
-            <p>As technology evolves, so do threats and defenses:</p>
-            <ul>
-                <li><strong>Quantum Computing:</strong> Will challenge current encryption methods, requiring quantum-resistant algorithms.</li>
-                <li><strong>5G and IoT Expansion:</strong> Increases attack surfaces, necessitating advanced security measures.</li>
-                <li><strong>Regulatory Changes:</strong> Stricter laws like GDPR and CCPA will drive compliance-focused security.</li>
-                <li><strong>AI-Driven Security:</strong> Automation in threat detection and response will become standard.</li>
-            </ul>
-        </section>
-        <section>
-            <h3>Essential Cybersecurity Tools</h3>
-            <p>To get started in cybersecurity, familiarize yourself with these fundamental tools:</p>
-            <ul>
-                <li><strong>Nmap:</strong> Network scanning tool for discovering hosts and services on a network.</li>
-                <li><strong>Wireshark:</strong> Packet analyzer for network troubleshooting and analysis.</li>
-                <li><strong>Metasploit:</strong> Framework for developing and executing exploit code against remote target machines.</li>
-                <li><strong>Burp Suite:</strong> Platform for web application security testing.</li>
-                <li><strong>Kali Linux:</strong> Linux distribution designed for penetration testing and security auditing.</li>
-                <li><strong>Snort:</strong> Open-source intrusion detection system.</li>
-            </ul>
-        </section>
-        <section>
-            <h3>Popular Certifications</h3>
-            <p>Certifications can boost your career in cybersecurity:</p>
-            <ul>
-                <li><strong>CompTIA Security+:</strong> Entry-level certification covering basic security concepts.</li>
-                <li><strong>CISSP:</strong> Advanced certification for security professionals, focusing on security and risk management.</li>
-                <li><strong>CEH (Certified Ethical Hacker):</strong> Certification for ethical hacking and penetration testing skills.</li>
-                <li><strong>CISM:</strong> Focuses on information security management and governance.</li>
-                <li><strong>OSCP:</strong> Hands-on penetration testing certification from Offensive Security.</li>
-            </ul>
-            <p>These certifications validate your skills and can lead to higher-paying jobs in the field.</p>
-        </section>
-        <section>
-            <h3>Key Topics from Cisco Introduction to Cybersecurity</h3>
-            <p>The Cisco Networking Academy's Introduction to Cybersecurity course covers essential concepts for beginners. Here are the main topics:</p>
-            <ul>
-                <li><strong>What is Cybersecurity?</strong> Overview of cybersecurity, its importance, and the CIA triad (Confidentiality, Integrity, Availability).</li>
-                <li><strong>Threats, Attacks, and Vulnerabilities:</strong> Common threats like malware, phishing, and social engineering; attack vectors and mitigation strategies.</li>
-                <li><strong>Cryptography:</strong> Encryption methods, symmetric and asymmetric cryptography, hashing, and digital signatures.</li>
-                <li><strong>Network Security:</strong> Firewalls, VPNs, IDS/IPS, and securing network infrastructure.</li>
-                <li><strong>Securing the Cloud:</strong> Cloud security models, shared responsibility, and protecting data in cloud environments.</li>
-                <li><strong>Endpoint Protection:</strong> Antivirus software, host-based firewalls, and endpoint detection and response (EDR).</li>
-                <li><strong>Identity Services (AAA):</strong> Authentication, Authorization, and Accounting; multi-factor authentication (MFA).</li>
-                <li><strong>Data Loss Prevention:</strong> Preventing unauthorized data exfiltration through policies and tools.</li>
-                <li><strong>Compliance:</strong> Understanding regulations like GDPR, HIPAA, and PCI-DSS.</li>
-                <li><strong>Incident Response:</strong> Phases of incident response: preparation, identification, containment, eradication, recovery, and lessons learned.</li>
-                <li><strong>Ethical Hacking:</strong> Penetration testing, vulnerability assessment, and ethical considerations.</li>
-                <li><strong>Cybersecurity Careers:</strong> Job roles, certifications, and career paths in cybersecurity.</li>
-            </ul>
+
+        <section style="margin-top: 4rem;">
+            <h3><i class="fas fa-certificate"></i> Key Topics from Cisco</h3>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h4>Cryptography</h4>
+                    <p>Encryption, hashing, and digital signatures.</p>
+                </div>
+                <div class="feature-card">
+                    <h4>Endpoint Protection</h4>
+                    <p>Antivirus, EDR, and host firewalls.</p>
+                </div>
+                <div class="feature-card">
+                    <h4>Compliance</h4>
+                    <p>GDPR, HIPAA, and PCI-DSS regulations.</p>
+                </div>
+                <div class="feature-card">
+                    <h4>Incident Response</h4>
+                    <p>Phases: Preparation to Lessons Learned.</p>
+                </div>
+            </div>
         </section>
     </main>
     <footer>
         <p>© 2024 Cybersecurity Explorer. All rights reserved.</p>
     </footer>
+    <div class="particles"></div>
     <script src="script.js"></script>
 </body>
 </html>

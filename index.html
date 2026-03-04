@@ -1,137 +1,168 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Cybersecurity Explorer</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <header class="site-header">
-    <div class="header-container">
-      <h1 class="glitch" data-text="Cybersecurity_Explorer">Cybersecurity_Explorer</h1>
-      <button class="nav-toggle" aria-label="Toggle navigation">
-        <span class="hamburger"></span>
-      </button>
-    </div>
-    <nav class="nav-menu">
-        <ul>
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="about.html">About Cybersecurity</a></li>
-            <li><a href="cyberthreats.html">Cyber Threats</a></li>
-            <li><a href="redteam.html">Red Team</a></li>
-            <li><a href="blueteam.html">Blue Team</a></li>
-            <li><a href="topics.html">Key Topics</a></li>
-            <li><a href="roadmap.html">Roadmap</a></li>
-            <li><a href="resources.html">Resources</a></li>
-        </ul>
-    </nav>
-  </header>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="reading-progress-bar"></div>
+      <div class="header-container">
+        <div class="header-left">
+            <div class="logo-wrapper">
+              <i class="fas fa-terminal logo-icon"></i>
+              <h1 class="glitch" data-text="Cyber_Explorer">
+                Cyber_Explorer
+              </h1>
+            </div>
+            <div class="system-status">
+                <div class="status-dot"></div>
+                <span class="status-text">SECURE_CHANNEL_v2.0</span>
+            </div>
+        </div>
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="index.html" class="active"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="cyberthreats.html"><i class="fas fa-shield-virus"></i> Threats</a></li>
+                <li><a href="redteam.html"><i class="fas fa-user-ninja"></i> Red</a></li>
+                <li><a href="blueteam.html"><i class="fas fa-user-shield"></i> Blue</a></li>
+                <li><a href="topics.html"><i class="fas fa-microchip"></i> Topics</a></li>
+                <li><a href="roadmap.html"><i class="fas fa-map-signs"></i> Roadmap</a></li>
+                <li><a href="resources.html"><i class="fas fa-book-open"></i> Tools</a></li>
+            </ul>
+        </nav>
+        <div class="header-actions">
+          <button class="search-btn" aria-label="Search">
+            <i class="fas fa-search"></i>
+          </button>
+          <a href="login.html" class="access-btn">
+            <span class="btn-text">TERMINAL_LOGIN</span>
+            <i class="fas fa-sign-in-alt"></i>
+          </a>
+          <button class="nav-toggle" aria-label="Toggle navigation">
+            <span class="hamburger"></span>
+          </button>
+        </div>
+      </div>
+    </header>
     <main>
-        <section class="hero">
-            <video autoplay muted loop class="hero-video">
-                <source src="bannervideo.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <div class="hero-overlay"></div>
-            <div class="hero-content">
-                <h2>Secure Your Digital World</h2>
-                <p>Discover the latest in cybersecurity knowledge, tools, and strategies to protect against evolving threats.</p>
-                <a href="about.html" class="hero-button">Learn More</a>
+      <section class="hero">
+        <video autoplay muted loop class="hero-video">
+          <source src="bannervideo.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <h2>Secure Your Digital World</h2>
+          <p>
+            Discover the latest in cybersecurity knowledge, tools, and
+            strategies to protect against evolving threats.
+          </p>
+          <a href="about.html" class="hero-button">Learn More</a>
+        </div>
+      </section>
+      <section class="intro">
+        <h2 data-text="Welcome to Cybersecurity Explorer">
+          Welcome to Cybersecurity Explorer
+        </h2>
+        <p>
+          Your comprehensive guide to everything about cybersecurity and the
+          roadmap to become a cybersecurity professional.
+        </p>
+      </section>
+        <div class="bento-grid">
+            <section class="bento-item large overview">
+                <i class="fas fa-shield-alt" style="font-size: 2rem; color: var(--accent-cyan); margin-bottom: 1rem;"></i>
+                <h3>Explore Knowledge</h3>
+                <p>Master the fundamentals and career paths.</p>
+                <ul>
+                    <li><a href="about.html">What is Cybersecurity?</a></li>
+                    <li><a href="topics.html">Key Topics</a></li>
+                    <li><a href="roadmap.html">Career Roadmap</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                </ul>
+            </section>
+            
+            <section class="bento-item tall importance">
+                <i class="fas fa-chart-line" style="font-size: 2rem; color: var(--accent-cyan); margin-bottom: 1rem;"></i>
+                <h3>Why it Matters</h3>
+                <p>Global cybercrime costs exceeding <strong>$8 trillion</strong> annually.</p>
+                <ul class="icon-list">
+                    <li><i class="fas fa-biohazard"></i> 300k+ new malware daily</li>
+                    <li><i class="fas fa-user-ninja"></i> 95% human error</li>
+                    <li><i class="fas fa-money-bill-wave"></i> $4.45M avg. breach cost</li>
+                </ul>
+            </section>
+
+            <section class="bento-item wide tips">
+                <i class="fas fa-lightbulb" style="font-size: 2rem; color: var(--accent-cyan); margin-bottom: 1rem;"></i>
+                <h3>Quick Security Tips</h3>
+                <ul style="display: flex; gap: 1rem; margin-bottom: 0;">
+                    <li><strong>MFA:</strong> Enable 2FA everywhere.</li>
+                    <li><strong>Updates:</strong> Patch systems regularly.</li>
+                    <li><strong>Phishing:</strong> Scrutinize all links.</li>
+                </ul>
+            </section>
+
+            <section class="bento-item trends">
+                <i class="fas fa-microchip" style="font-size: 1.5rem; color: var(--accent-cyan); margin-bottom: 0.5rem;"></i>
+                <h3>AI Trends</h3>
+                <p>AI-driven threat detection is the new standard.</p>
+            </section>
+
+            <section class="bento-item threats">
+                <i class="fas fa-skull-crossbones" style="font-size: 1.5rem; color: var(--accent-cyan); margin-bottom: 0.5rem;"></i>
+                <h3>Top Threats</h3>
+                <p>Ransomware and Supply Chain attacks are rising.</p>
+            </section>
+        </div>
+
+        <section class="featured-resources">
+            <h3>Featured Learning Paths</h3>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <a href="cyberthreats.html">
+                        <h4>Threat Intel</h4>
+                        <p>Deep dive into attack vectors.</p>
+                    </a>
+                </div>
+                <div class="feature-card">
+                    <a href="redteam.html">
+                        <h4>Offensive Ops</h4>
+                        <p>Master ethical hacking.</p>
+                    </a>
+                </div>
+                <div class="feature-card">
+                    <a href="blueteam.html">
+                        <h4>Defensive Ops</h4>
+                        <p>Incident response & defense.</p>
+                    </a>
+                </div>
             </div>
         </section>
-        <section class="intro">
-            <h2 data-text="Welcome to Cybersecurity Explorer">Welcome to Cybersecurity Explorer</h2>
-            <p>Your comprehensive guide to everything about cybersecurity and the roadmap to become a cybersecurity professional.</p>
-        </section>
-        <section class="overview">
-            <h3>Explore Cybersecurity</h3>
-            <p>Learn about the fundamentals, threats, defenses, and career paths in cybersecurity.</p>
-            <ul>
-                <li><a href="about.html">What is Cybersecurity?</a></li>
-                <li><a href="topics.html">Key Cybersecurity Topics</a></li>
-                <li><a href="roadmap.html">Roadmap to Become a Cybersecurity Expert</a></li>
-                <li><a href="resources.html">Additional Resources</a></li>
-            </ul>
-        </section>
-        <section class="importance">
-            <h3>Why Cybersecurity Matters</h3>
-            <p>In an increasingly digital world, cyber threats are rising. According to recent reports, cybercrime costs the global economy over $8 trillion annually, with millions of data breaches occurring each year. Protecting your personal information, business data, and national infrastructure is crucial.</p>
-            <p>Key Statistics:</p>
-            <ul>
-                <li>Over 300,000 new malware variants are detected daily.</li>
-                <li>95% of cybersecurity breaches are due to human error.</li>
-                <li>The average cost of a data breach is $4.45 million.</li>
-            </ul>
-        </section>
-        <section class="tips">
-            <h3>Quick Cybersecurity Tips</h3>
-            <ul>
-                <li>Use strong, unique passwords and enable two-factor authentication.</li>
-                <li>Keep software and systems updated to patch vulnerabilities.</li>
-                <li>Be cautious with email attachments and links from unknown sources.</li>
-                <li>Backup your data regularly and use antivirus software.</li>
-            </ul>
-        </section>
-        <section class="trends">
-            <h3>Latest Trends in Cybersecurity</h3>
-            <p>Stay ahead with emerging trends:</p>
-            <ul>
-                <li><strong>AI and Machine Learning:</strong> Leveraging advanced algorithms for real-time threat detection, anomaly identification, and automated incident response to combat sophisticated cyber attacks.</li>
-                <li><strong>Zero Trust Model:</strong> A security framework that verifies every user and device attempting to access resources, regardless of location, reducing the risk of insider threats and lateral movement by attackers.</li>
-                <li><strong>Cloud Security:</strong> As organizations migrate to cloud platforms, implementing robust security measures like encryption, access controls, and compliance frameworks to protect data in multi-cloud and hybrid environments.</li>
-                <li><strong>IoT Security:</strong> Addressing vulnerabilities in connected devices through secure firmware updates, network segmentation, and device authentication to prevent botnets and data exfiltration.</li>
-                <li><strong>Quantum Computing Threats:</strong> Preparing for the potential disruption of current encryption methods by quantum computers, driving research into quantum-resistant algorithms.</li>
-                <li><strong>Blockchain for Security:</strong> Utilizing blockchain technology for secure data sharing, immutable audit logs, and decentralized identity management.</li>
-            </ul>
-        </section>
-        <section class="threats">
-            <h3>Common Cyber Threats</h3>
-            <p>Understanding prevalent threats is key to effective defense:</p>
-            <ul>
-                <li><strong>Malware:</strong> Malicious software including viruses, worms, and ransomware that can damage systems or steal data.</li>
-                <li><strong>Phishing:</strong> Deceptive attempts to obtain sensitive information by disguising as trustworthy entities via email or websites.</li>
-                <li><strong>DDoS Attacks:</strong> Distributed Denial of Service attacks that overwhelm servers with traffic, making services unavailable.</li>
-                <li><strong>Data Breaches:</strong> Unauthorized access to sensitive data, often leading to identity theft or financial loss.</li>
-                <li><strong>Insider Threats:</strong> Risks posed by employees or contractors with access to systems who may intentionally or unintentionally cause harm.</li>
-                <li><strong>Supply Chain Attacks:</strong> Compromising third-party vendors or software to infiltrate target networks.</li>
-            </ul>
-        </section>
-        <section class="featured-resources">
-            <h3>Featured Resources</h3>
-            <p>Dive deeper into cybersecurity with these curated resources:</p>
-            <ul>
-                <li><a href="cyberthreats.html">Comprehensive Guide to Cyber Threats</a> - Learn about various attack vectors and mitigation strategies.</li>
-                <li><a href="redteam.html">Red Team Operations</a> - Explore offensive security techniques and ethical hacking.</li>
-                <li><a href="blueteam.html">Blue Team Defense</a> - Master defensive strategies and incident response.</li>
-                <li><a href="topics.html">Key Cybersecurity Topics</a> - In-depth articles on encryption, network security, and more.</li>
-                <li><a href="roadmap.html">Career Roadmap</a> - Step-by-step guide to becoming a cybersecurity professional.</li>
-            </ul>
-        </section>
-        <section class="cta">
-            <h3>Ready to Start Your Journey?</h3>
-            <p>Explore our resources and take the first step towards a career in cybersecurity.</p>
-            <a href="roadmap.html" class="cta-button">View Roadmap</a>
-        </section>
+      <section class="cta">
+        <h3>Ready to Start Your Journey?</h3>
+        <p>
+          Explore our resources and take the first step towards a career in
+          cybersecurity.
+        </p>
+        <a href="roadmap.html" class="cta-button">View Roadmap</a>
+      </section>
     </main>
     <footer>
-        <p>© 2024 Cybersecurity Explorer. All rights reserved.</p>
+      <p>© 2024 Cybersecurity Explorer. All rights reserved.</p>
     </footer>
 
-    <!-- Floating particles for cyber effect -->
-    <div class="particles">
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-    </div>
+    <!-- Dynamic particles container -->
+    <div class="particles"></div>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

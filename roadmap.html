@@ -3,108 +3,110 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Roadmap - Cybersecurity Explorer</title>
+    <title>Career Roadmap - Cybersecurity Explorer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
 </head>
 <body>
   <header class="site-header">
     <div class="header-container">
-      <h1 class="glitch" data-text="Cybersecurity_Explorer">Cybersecurity_Explorer</h1>
+      <div class="header-left">
+          <h1 class="glitch" data-text="Cybersecurity_Explorer">
+            Cybersecurity_Explorer
+          </h1>
+          <div class="system-status">
+              <div class="status-dot"></div>
+              System: Secured
+          </div>
+      </div>
+      <nav class="nav-menu">
+          <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Cybersecurity</a></li>
+              <li><a href="cyberthreats.html">Cyber Threats</a></li>
+              <li><a href="redteam.html">Red Team</a></li>
+              <li><a href="blueteam.html">Blue Team</a></li>
+              <li><a href="topics.html">Key Topics</a></li>
+              <li><a href="roadmap.html" class="active">Roadmap</a></li>
+              <li><a href="resources.html">Resources</a></li>
+          </ul>
+      </nav>
       <button class="nav-toggle" aria-label="Toggle navigation">
         <span class="hamburger"></span>
       </button>
     </div>
-    <nav class="nav-menu">
-        <ul>
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="about.html">About Cybersecurity</a></li>
-            <li><a href="cyberthreats.html">Cyber Threats</a></li>
-            <li><a href="redteam.html">Red Team</a></li>
-            <li><a href="blueteam.html">Blue Team</a></li>
-            <li><a href="topics.html">Key Topics</a></li>
-            <li><a href="roadmap.html">Roadmap</a></li>
-            <li><a href="resources.html">Resources</a></li>
-        </ul>
-    </nav>
   </header>
     <main>
-        <section>
-            <h2>Roadmap to Become a Cybersecurity Professional</h2>
-            <p>This roadmap outlines the key steps and skills needed to build a successful career in cybersecurity.</p>
+        <div class="sub-hero">
+            <h1 class="glitch" data-text="Career_Pathways">Career_Pathways</h1>
+            <p>Your strategic journey from novice to elite security professional.</p>
+        </div>
+
+        <section class="timeline">
+            <div class="timeline-item">
+                <h3><i class="fas fa-seedling"></i> Stage 1: Fundamentals</h3>
+                <p>Master the basics of computing, networking, and operating systems.</p>
+                <ul class="icon-list">
+                    <li><i class="fas fa-network-wired"></i> TCP/IP & OSI Model</li>
+                    <li><i class="fas fa-terminal"></i> Linux & Windows Admin</li>
+                    <li><i class="fas fa-code"></i> Python Fundamentals</li>
+                </ul>
+            </div>
+
+            <div class="timeline-item">
+                <h3><i class="fas fa-shield-alt"></i> Stage 2: Security Basics</h3>
+                <p>Learn core security concepts and defense methodologies.</p>
+                <ul class="icon-list">
+                    <li><i class="fas fa-lock"></i> Cryptography & PKI</li>
+                    <li><i class="fas fa-user-lock"></i> Identity & Access Management</li>
+                    <li><i class="fas fa-graduation-cap"></i> CompTIA Security+</li>
+                </ul>
+            </div>
+
+            <div class="timeline-item">
+                <h3><i class="fas fa-user-ninja"></i> Stage 3: Offensive Ops</h3>
+                <p>Specializing in penetration testing and vulnerability research.</p>
+                <ul class="icon-list">
+                    <li><i class="fas fa-vial"></i> Web App Pentesting</li>
+                    <li><i class="fas fa-laptop-code"></i> Exploit Development</li>
+                    <li><i class="fas fa-medal"></i> OSCP Certification</li>
+                </ul>
+            </div>
+
+            <div class="timeline-item">
+                <h3><i class="fas fa-tower-broadcast"></i> Stage 4: Defensive Ops</h3>
+                <p>Monitoring, incident response, and threat hunting.</p>
+                <ul class="icon-list">
+                    <li><i class="fas fa-microscope"></i> SOC Operations & SIEM</li>
+                    <li><i class="fas fa-fire-extinguisher"></i> Incident Response</li>
+                    <li><i class="fas fa-search"></i> Digital Forensics (GCFE)</li>
+                </ul>
+            </div>
+
+            <div class="timeline-item">
+                <h3><i class="fas fa-chess-knight"></i> Stage 5: Architecture</h3>
+                <p>Designing secure enterprise systems and cloud environments.</p>
+                <ul class="icon-list">
+                    <li><i class="fas fa-cloud"></i> AWS/Azure Security</li>
+                    <li><i class="fas fa-project-diagram"></i> Zero Trust Architecture</li>
+                    <li><i class="fas fa-crown"></i> CISSP Certification</li>
+                </ul>
+            </div>
         </section>
-        <section>
-            <h3>1. Build a Strong Foundation (3-6 months)</h3>
-            <ul>
-                <li>Learn computer fundamentals: operating systems (Windows, Linux), networking (TCP/IP, subnets), and programming basics (Python, Bash).</li>
-                <li>Understand basic security concepts: CIA triad (confidentiality, integrity, availability).</li>
-                <li>Familiarize yourself with common cyber threats and attack vectors.</li>
-            </ul>
-            <p><strong>Skills/Tools:</strong> Basic Linux commands, networking tools like ping and traceroute.</p>
-            <p><strong>Resources:</strong> <a href="https://www.coursera.org/learn/computer-networking" target="_blank">Coursera Networking Course</a>, <a href="https://www.codecademy.com/learn/learn-python-3" target="_blank">Codecademy Python</a>.</p>
-        </section>
-        <section>
-            <h3>2. Gain Practical Skills (6-12 months)</h3>
-            <ul>
-                <li>Learn about firewalls, VPNs, IDS/IPS, and endpoint security.</li>
-                <li>Practice ethical hacking and penetration testing techniques.</li>
-                <li>Get hands-on experience with security tools like Wireshark, Metasploit, and Nmap.</li>
-            </ul>
-            <p><strong>Skills/Tools:</strong> Packet analysis with Wireshark, vulnerability scanning with Nmap, basic scripting for automation.</p>
-            <p><strong>Resources:</strong> <a href="https://www.cybrary.it/course/comptia-security-plus/" target="_blank">Cybrary Security+ Prep</a>, <a href="https://tryhackme.com/" target="_blank">TryHackMe</a>.</p>
-        </section>
-        <section>
-            <h3>3. Obtain Certifications (6-12 months)</h3>
-            <ul>
-                <li>Consider certifications like CompTIA Security+, CEH, CISSP, and OSCP.</li>
-                <li>Certifications validate your knowledge and improve job prospects.</li>
-            </ul>
-            <p><strong>Timeline:</strong> Start with entry-level like Security+ (2-3 months study), then CEH or OSCP (3-6 months).</p>
-            <p><strong>Resources:</strong> <a href="https://www.comptia.org/certifications/security" target="_blank">CompTIA Security+</a>, <a href="https://www.offsec.com/courses/pen-200/" target="_blank">OSCP</a>.</p>
-        </section>
-        <section>
-            <h3>4. Specialize and Advance (1-2 years)</h3>
-            <ul>
-                <li>Choose a specialization: network security, cloud security, incident response, etc.</li>
-                <li>Stay updated with the latest cybersecurity trends and threats.</li>
-                <li>Contribute to open source projects or cybersecurity communities.</li>
-            </ul>
-            <p><strong>Skills/Tools:</strong> Advanced tools like SIEM (Splunk), cloud security (AWS Security), forensics.</p>
-            <p><strong>Resources:</strong> <a href="https://www.sans.org/" target="_blank">SANS Institute</a>, <a href="https://www.blackhat.com/" target="_blank">Black Hat</a>.</p>
-        </section>
-        <section>
-            <h3>5. Build a Professional Network (Ongoing)</h3>
-            <ul>
-                <li>Attend conferences, webinars, and workshops.</li>
-                <li>Join professional organizations like (ISC)², ISACA, or local security groups.</li>
-                <li>Engage with peers on forums and social media.</li>
-            </ul>
-            <p><strong>Skills/Tools:</strong> Networking on LinkedIn, participating in CTF challenges.</p>
-            <p><strong>Resources:</strong> <a href="https://www.defcon.org/" target="_blank">DEF CON</a>, <a href="https://www.reddit.com/r/cybersecurity/" target="_blank">Reddit Cybersecurity</a>.</p>
-        </section>
-        <section>
-            <h3>6. Gain Experience and Pursue Opportunities (Ongoing)</h3>
-            <ul>
-                <li>Participate in bug bounty programs and capture the flag (CTF) competitions to build practical skills.</li>
-                <li>Seek internships, entry-level positions, or freelance projects in cybersecurity.</li>
-                <li>Contribute to open-source security projects or write blogs/articles to showcase expertise.</li>
-            </ul>
-            <p><strong>Skills/Tools:</strong> CTF platforms like HackTheBox, Bugcrowd for bounties, GitHub for contributions.</p>
-            <p><strong>Resources:</strong> <a href="https://www.hackthebox.com/" target="_blank">HackTheBox</a>, <a href="https://www.bugcrowd.com/" target="_blank">Bugcrowd</a>, job sites like Indeed or LinkedIn for cybersecurity roles.</p>
-        </section>
-        <section>
-            <h3>7. Stay Updated and Continue Learning (Lifelong)</h3>
-            <ul>
-                <li>Follow industry news, subscribe to cybersecurity newsletters, and attend advanced training.</li>
-                <li>Pursue higher certifications like CISSP or specialized courses in emerging areas like AI security.</li>
-                <li>Engage in continuous professional development to adapt to evolving threats.</li>
-            </ul>
-            <p><strong>Skills/Tools:</strong> RSS feeds from Krebs on Security, membership in professional bodies for recertification.</p>
-            <p><strong>Resources:</strong> <a href="https://krebsonsecurity.com/" target="_blank">Krebs on Security</a>, <a href="https://www.isc2.org/Certifications/CISSP" target="_blank">CISSP Certification</a>, online platforms like Coursera for advanced courses.</p>
+
+        <section class="cta" style="text-align: center;">
+            <h3>Start Your Training Today</h3>
+            <p>Check out our curated list of free and premium resources.</p>
+            <a href="resources.html" class="hero-button">View Resources</a>
         </section>
     </main>
     <footer>
         <p>© 2024 Cybersecurity Explorer. All rights reserved.</p>
     </footer>
+    <div class="particles"></div>
     <script src="script.js"></script>
 </body>
 </html>
